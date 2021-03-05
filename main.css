@@ -1,0 +1,15 @@
+* {
+    box-sizing:border-box;
+}
+
+body {
+    background-color: rgb(238, 231, 231);
+}
+.flex-container {
+    display:flex;
+    flex-flow:column wrap;
+    align-items:center;
+    background-color:white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    padding:20px;
+}
