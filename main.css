@@ -5,11 +5,67 @@
 body {
     background-color: rgb(238, 231, 231);
 }
-.flex-container {
+
+.content {
     display:flex;
-    flex-flow:column wrap;
+    flex-direction:column;
     align-items:center;
     background-color:white;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
     padding:20px;
+    background-image: linear-gradient(to right, white , lightblue);
+    width: 400px;
+    margin:auto;
+}
+
+
+/* Area de Input */
+#city-input {
+    border:none;
+    border-bottom:1px solid black;
+    margin-bottom: 10px;
+    overflow: auto;
+    outline: none;
+    width:40%;
+    transition: 0.4s;
+    background:transparent;
+}
+#city-input:focus{
+    width:50%;
+    font-size:medium;
+}
+#city-input::placeholder {
+    color:black;
+    opacity:0.7;
+}
+#submit-input {
+    border:1px solid black;
+    border-radius: 10%;
+    padding:10px;
+    cursor:pointer;
+    opacity: 0.75;
+    transition: 0.4s;
+    background:transparent;
+}
+#submit-input:hover{
+    opacity: 1;
+}
+
+/* Dados do Clima  */
+.row {
+    width:100%;
+    display:flex;
+    justify-content: center;
+    
+}
+#temperature{
+    padding:0;
+    margin:0;
+    font-size:70px;
+}
+.img {
+    padding-top:5px;
+}
+#feel{
+    margin:0;
 }

@@ -7,13 +7,17 @@
     <title>Weather</title>
 </head>
 <body>
-    <div class="flex-container">
-        <input type="text">
-        <input type="submit" value="Submit">
-        <h2>State, Country at 6:00 AM</h2>
-        <h2>25°</h3>
-        <img src="img/rain.png" alt="Rainy" width="5%">
-        <h4>Frio</h4>
+    <div class="content">
+        <input type="text" id="city-input" placeholder="Digite a Cidade aqui">
+        <input type="submit" id="submit-input" value="Procurar">
+        <h2 class="location-hour">State, Country at 6:00 AM</h2>
+        <div class="row">
+            <h1 id="temperature">25°</h1>
+            <div class="img">
+                <img id="weather-img"src="img/rain.png" alt="Rainy" width="40px">
+                <h3 id="feel">Frio</h3>        
+            </div>
+        </div>
     </div>
 
     <!-- Javascript -->
