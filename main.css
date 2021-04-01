@@ -61,17 +61,18 @@ body {
 #temperature{
     width:100%;
     padding:0;
-    margin:0;
-    font-size:70px;
-    text-align: end;
+    margin:auto;
+    font-size:100px;
+    text-align: right;
 }
-.img {
+#img {
     width:100%;
     padding-top:5px;
     text-align: center;
 }
-.fas {
-    font-size:40px;
+#weatherImg {
+    width:40%;
+    
 }
 #weather{
     margin:0 6px;
