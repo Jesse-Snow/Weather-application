@@ -3,14 +3,14 @@ const temperatureFeel = document.getElementById("weather");
 const imgDiv = document.getElementById("img");
 const submitButton = document.getElementById("submit-input");
 const cityInputText = document.getElementById("city-input");
-let weatherImg = document.getElementById("weatherImg")
-let city = "";
+const weatherImg = document.getElementById("weatherImg")
+const locationHour = document.getElementById("locationHour")
 
 // Input
 submitButton.addEventListener("click",function(){
-    city = "";
     city = cityInputText.value;
     let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8542a14a77bcc9d04a6905a0cb7c1756&mode=json&units=metric&lang=pt_br`;
+    cityInputText.value = "";
     
     // Request data from openweather URL
     fetch(url)
@@ -34,14 +34,27 @@ submitButton.addEventListener("click",function(){
         // Show the Icon 
         let iconId = data.weather[0].icon;
         let icon = `http://openweathermap.org/img/wn/${iconId}@2x.png`;
-        if(weatherImg)
+        if(document.getElementById("weatherImg"))
         {
-            weatherImg.remove();
+            document.getElementById("weatherImg").remove();
         }
         let newText = document.createElement("img");
         newText.setAttribute("src",icon);
         newText.setAttribute("id","weatherImg")
         imgDiv.insertBefore(newText,temperatureFeel);
+        return data;
+    })
+    .then(function(data) {
+        // Name of City and Contry
+        let cityName = data.name;
+        let countryName = data.sys.country;
+        
+        // Get the Current Hour
+        let dateTime = new Date();
+        let currentHour = dateTime.getHours();
+        let currentMinutes = dateTime.getMinutes();
+
+        locationHour.innerText = `${cityName},${countryName} às ${currentHour}h:${currentMinutes}min`;
     })
     .catch(function(){
         window.alert("Erro, recarregue a página.");
