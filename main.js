@@ -53,7 +53,6 @@ submitButton.addEventListener("click",function(){
         let dateTime = new Date();
         let currentHour = dateTime.getHours();
         let currentMinutes = dateTime.getMinutes();
-
         locationHour.innerText = `${cityName},${countryName} às ${currentHour}h:${currentMinutes}min`;
     })
     .catch(function(){
