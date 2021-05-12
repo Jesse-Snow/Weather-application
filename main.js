@@ -9,7 +9,7 @@ const locationHour = document.getElementById("locationHour")
 // Input
 submitButton.addEventListener("click",function(){
     city = cityInputText.value;
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8542a14a77bcc9d04a6905a0cb7c1756&mode=json&units=metric&lang=pt_br`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8542a14a77bcc9d04a6905a0cb7c1756&mode=json&units=metric&lang=pt_br`;
     cityInputText.value = "";
     
     // Request data from openweather URL
