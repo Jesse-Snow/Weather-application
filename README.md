@@ -12,9 +12,7 @@ This App show the current weather based of user Input. The data is showed from [
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -29,7 +27,7 @@ This App show the current weather based of user Input. The data is showed from [
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- [Preview Solution](https://jesse-snow.github.io/Weather-application/)
 
 ## My process
 
